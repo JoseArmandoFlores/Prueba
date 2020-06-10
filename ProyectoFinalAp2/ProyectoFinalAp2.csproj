@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200610194643_Migracion_Inicial.cs" />
+    <Compile Remove="Migrations\20200610194643_Migracion_Inicial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.Toast" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Consultas\" />
+    <Folder Include="Pages\Reportes\" />
+  </ItemGroup>
+
+</Project>
